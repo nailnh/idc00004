@@ -1,0 +1,42 @@
+@import "./variables";
+
+@mixin small-btn($colour,$hover-colour){
+    height: $btn-height;
+    width: $btn-width;
+    color: $text-colour;
+    background-color: $colour;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    font-family: $myfont;
+
+    &:hover{
+        background-color: $hover-colour;
+        transform: scale(1.03);
+    }
+}
+
+@mixin a-btn{
+    text-decoration: none;
+    color: $text-colour2;
+    font-family: $myfont;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $warning-colour;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    &:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    } 
+}

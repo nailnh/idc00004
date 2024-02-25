@@ -1,0 +1,32 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+@import "./sass-utils/variables";
+@import "./sass-utils/mixins";
+.container{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+// .boxes{
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     margin-top: 100px;
+// }
+
+
+// .a{
+//     @include small-btn($success-colour,$success-hover-colour)
+// }
+
+// .b{
+//     @include small-btn($fail-colour,$fail-hover-colour)
+// }
+
+// .c{
+//     @include small-btn($warning-colour,$warning-hover-colour)
+// }
+
+.up-dir p{
+    @include a-btn
+}
